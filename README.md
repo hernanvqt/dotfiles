@@ -1,4 +1,14 @@
-# dotfiles
+# Paquete instalados
+ - zsh con `apt install zsh`
+ - [oh-my-zsh](https://ohmyz.sh/)
+
+
+## Anotaciones
+### zsh
+ - Es necesario crear en .cache/zsh para guardar zsh-history, y lo mismo en .config, no vienen prehechas. Mirar zsh-path y HISTFILE variables en .zshrc
+
+## dotfiles
+
 El directorio dotfiles es subido a github y se usa stow para crear symbolic links de todo lo que haya en este directorio en el directorio padre. Por lo que es necesario añadir un `.stow-local-ignore` para evitar que se creer el sym link de .git y README.md por ejemplo.
 
 ---
@@ -16,3 +26,5 @@ Y se eliminaran los del directorio padre
 ## Reference
 
 [Give Your Dotfiles a Home with GNU Stow](https://www.youtube.com/watch?v=CxAT1u8G7is)
+
+
