@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 # Para mejorar la organizacion lo situamos en .config/zsh (la tenemos que crear)
@@ -122,3 +122,7 @@ bindkey -s '^o' 'lfcd\n'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Comandos que usar al inicar el shell
+cd ~/Documents
+
