@@ -1,5 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/hernanvq/.config/nvim'
+let g:netrw_dirhist_9='/home/hernanvq'
+let g:netrw_dirhist_8='/home/hernanvq/Documents/IdeaProjects/TrazabilidadTest/.git'
+let g:netrw_dirhist_7='/opt/eclipse/configuration'
+let g:netrw_dirhist_6='/home/hernanvq/Documents/SisInt2'
+let g:netrw_dirhist_5='/home/hernanvq/.dotfiles/.config/polybar/polybar'
+let g:netrw_dirhist_4='/home/hernan-user/.config/i3'
 let g:netrw_dirhist_3='/tmp/xournalpp-26643/tex'
 let g:netrw_dirhist_2='/tmp/xournalpp-23828'
 let g:netrw_dirhist_1='/tmp/xournalpp-26643'

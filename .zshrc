@@ -1,9 +1,14 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/usr/share/:$HOME/bin:/usr/local/bin:/usr/sbin:$JAVA_HOME/bin:$ECLIPSE_HOME:$PATH
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+export ECLIPSE_HOME="/opt/eclipse"
 
 # Path to your oh-my-zsh installation.
 # Para mejorar la organizacion lo situamos en .config/zsh (la tenemos que crear)
 export ZSH="$HOME/.config/zsh/.oh-my-zsh"
+
+export EDITOR=/usr/bin/nvim
+
 
 # Path to .zsh_history
 HISTFILE=.cache/zsh/.zsh_history
@@ -90,11 +95,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+ if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='nvim'
+ else
+   export EDITOR='vim'
+ fi
 
 # vi mode
 bindkey -v
@@ -106,9 +111,14 @@ lfcd () {
     if [ -f "$tmp" ]; then
         dir="$(cat "$tmp")"
         rm -f "$tmp"
-        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+        if [ -d "$dir" ]; then
+            if [ "$dir" != "$(pwd)" ]; then
+                cd "$dir"
+            fi
+        fi
     fi
 }
+
 bindkey -s '^o' 'lfcd\n'
 
 # Compilation flags
@@ -126,3 +136,4 @@ bindkey -s '^o' 'lfcd\n'
 # Comandos que usar al inicar el shell
 cd ~/Documents
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
