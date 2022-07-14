@@ -14,7 +14,7 @@ set title " It shows the file title
 " Number on the left
 set number " Show the numbers on the left
 set numberwidth=1 " Set numbers width
-set relativenumber " It shows the current cursor line
+" set relativenumber " It shows the current cursor line
 
 " Mouse
 set clipboard=unnamedplus " Keep what you copy on the clip-board
