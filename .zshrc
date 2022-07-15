@@ -1,23 +1,20 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=/usr/share/:$HOME/bin:/usr/local/bin:/usr/sbin:$JAVA_HOME/bin:$ECLIPSE_HOME:$PATH
-export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
-export ECLIPSE_HOME="/opt/eclipse"
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-# Para mejorar la organizacion lo situamos en .config/zsh (la tenemos que crear)
-export ZSH="$HOME/.config/zsh/.oh-my-zsh"
-
-export EDITOR=/usr/bin/nvim
-
-
-# Path to .zsh_history
-HISTFILE=.cache/zsh/.zsh_history
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="robbyrussell"
+
+
+# append
+path+=('/home/hernanvq/.local/bin')
+# export to sub-processes (make it inherited by child processes)
+export PATH
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -79,11 +76,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-	git 
-	zsh-autosuggestions
-	zsh-syntax-highlighting
-	)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -95,31 +88,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
- if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='nvim'
- else
-   export EDITOR='vim'
- fi
-
-# vi mode
-bindkey -v
-
-# Use lf to switch directories and bind it to ctrl-o
-lfcd () {
-    tmp="$(mktemp)"
-    lf -last-dir-path="$tmp" "$@"
-    if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        rm -f "$tmp"
-        if [ -d "$dir" ]; then
-            if [ "$dir" != "$(pwd)" ]; then
-                cd "$dir"
-            fi
-        fi
-    fi
-}
-
-bindkey -s '^o' 'lfcd\n'
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='mvim'
+# fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -132,8 +105,3 @@ bindkey -s '^o' 'lfcd\n'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Comandos que usar al inicar el shell
-cd ~/Documents
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
