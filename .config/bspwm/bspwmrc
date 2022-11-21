@@ -1,12 +1,16 @@
 #! /bin/sh
 
+# DOCUMENTATION https://github.com/baskerville/bspwm/blob/master/doc/bspwm.1.asciidoc#settings
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 bspc monitor -d I II III IV V VI VII VIII IX X
 
+# border_width determines the thickness, in pixels, of the border width of the windows.
 bspc config border_width            	0 #2
+# window_gap deals with the amount of gaps, in pixels, around windows.
 bspc config window_gap        	    	0 #12
 
+# split_ratio determines the ratio between the two leaf nodes when split.
 bspc config split_ratio             	0.52
 bspc config borderless_monocle      	true
 bspc config gapless_monocle         	true
@@ -20,14 +24,14 @@ bspc config focus_follows_pointer	true
 bspc config automatic_scheme	    spiral
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
-bspc rule -a Chromium desktop='^2'
+bspc rule -a firefox desktop='^0'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
 $HOME/.config/polybar/launch.sh &
-xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
-xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
+xinput set-prop "SFT0002:00 04F3:31AD Touchpad" 341 1 # Tapping enabled
+xinput set-prop "SFT0002:00 04F3:31AD Touchpad" 320 1 # Natural scrolling enabled
 
 # inicio de daemon de emacs
 /usr/bin/emacs --daemon

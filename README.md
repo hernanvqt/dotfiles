@@ -1,11 +1,34 @@
 # Paquete instalados
  - zsh con `apt install zsh`
- - [oh-my-zsh](https://ohmyz.sh/)
+ - [alacritty](https://github.com/alacritty/alacritty/blob/master/INSTALL.md#install-the-rust-compiler-with-rustup)
+ - [bspwm y sxhkd](https://www.maketecheasier.com/install-configure-bspwm/)
+ - font Iosevka
+ - polybar
+ - mpv
+ - [doom emacs](https://github.com/doomemacs/doomemacs#install)
 
 
 ## Anotaciones
 ### zsh
- - Es necesario crear en .cache/zsh para guardar zsh-history, y lo mismo en .config, no vienen prehechas. Mirar zsh-path y HISTFILE variables en .zshrc
+ 1. Primer se instala zsh y luego se instala el [oh-my-zsh](https://ohmyz.sh/#install)
+
+### Alacritty
+ 1. Clonar el directorio de alacritty
+ 2. Instalar compilar de Rust
+ 3. Compilar los archivos y el resultado se encontrará en un executable dentro de target/release
+
+Es posible que tengamos [problemas con la font](https://www.behova.net/fonts-in-alacritty/)
+
+### Bspwm y sxhkd
+En default el touchpad no esta activado, asi que es necesario ver el [nombre del dispositivo](https://wiki.archlinux.org/title/Libinput#Via_xinput). Una vez visto el nombre y el comando apropiado:
+```
+$ xinput set-prop device option setting
+```
+Lo copiamos en nuestro config file de bspwmrc
+### Font Iosevka
+ 1. [Manual Installation](https://github.com/be5invis/Iosevka)
+ 2. Y lo [instalamos](https://www.internalpointers.com/post/install-new-fonts-linux-command-line) 
+ 2. En este caso la familia es _Iosevka Term_ 
 
 ## dotfiles
 

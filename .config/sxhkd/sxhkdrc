@@ -21,8 +21,10 @@ super + F1
 super + q
 	firefox
 
+super + shift + s 
+	flameshot gui
 # open emacs
-super + space
+super + @space
 	emacsclient -c -a 'emacs'
 
 #
