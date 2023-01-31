@@ -1,19 +1,16 @@
 # dotfiles
-
 El directorio dotfiles es subido a github y se usa stow para crear symbolic links de todo lo que haya en este directorio en el directorio padre. Por lo que es necesario añadir un `.stow-local-ignore` para evitar que se creer el sym link de .git y README.md por ejemplo.
 `stow .`
 Hará todos los sys link del directorio en el que se encuentre. Si quisieramos eliminar todos los symbolic links creados, usaremos
 `stow -D .`
 Y se eliminaran los del directorio padre
---- 
-## Reference
 [Give Your Dotfiles a Home with GNU Stow](https://www.youtube.com/watch?v=CxAT1u8G7is)
 
 ---
 # Setting up the desktop enviroment
-    1. [bspwm y sxhkd](https://www.maketecheasier.com/install-configure-bspwm/)
-    2. font Iosevka
-    3. polybar
+1. [bspwm y sxhkd](https://www.maketecheasier.com/install-configure-bspwm/)
+2. font Iosevka
+3. polybar
 
 ### Bspwm y sxhkd
 En default el touchpad no esta activado, asi que es necesario ver el [nombre del dispositivo](https://wiki.archlinux.org/title/Libinput#Via_xinput). Una vez visto el nombre y el comando apropiado:
@@ -23,35 +20,26 @@ $ xinput set-prop device option setting
 Lo copiamos en nuestro config file de bspwmrc
 
 ### Font Iosevka
- 1. [Manual Installation](https://github.com/be5invis/Iosevka)
- 2. Y lo [instalamos](https://www.internalpointers.com/post/install-new-fonts-linux-command-line) 
- 2. En este caso la familia es _Iosevka Term_ 
+1. [Manual Installation](https://github.com/be5invis/Iosevka)
+2. Y lo [instalamos](https://www.internalpointers.com/post/install-new-fonts-linux-command-line) 
+2. En este caso la familia es _Iosevka Term_ 
 
 ---
 # Lista de programas en el dotfiles
-    1. Git                                                                                                                       
-    2. Neovim
-    3. Tmux
-    4. ZSH
- - [alacritty](https://github.com/alacritty/alacritty/blob/master/INSTALL.md#install-the-rust-compiler-with-rustup)
- - mpv
- - [doom emacs](https://github.com/doomemacs/doomemacs#install)
+1. Git                                                                                                                       
+2. Neovim
+3. Tmux
+4. ZSH
+5. [alacritty](https://github.com/alacritty/alacritty/blob/master/INSTALL.md#install-the-rust-compiler-with-rustup)
+6. [doom emacs](https://github.com/doomemacs/doomemacs#install)
+7. mpv
 
-
-
-### Alacritty
- 1. Clonar el directorio de alacritty
- 2. Instalar compilar de Rust
- 3. Compilar los archivos y el resultado se encontrará en un executable dentro de target/release
-
-Es posible que tengamos [problemas con la font](https://www.behova.net/fonts-in-alacritty/)
 
 # Lista de programas
     1. Git
     2. Neovim
     3. Tmux
     4. ZSH
-# Programas
 ---
 ## Git
 En primer lugar se instala git
@@ -111,5 +99,11 @@ sudo apt install zsh
 ```
 Y luego se instalará el [ohmyzsh](https://ohmyz.sh/#install)
 
+## Alacritty
+1. Clonar el directorio de alacritty
+2. Instalar compilar de Rust
+3. Compilar los archivos y el resultado se encontrará en un executable dentro de target/release
+
+Es posible que tengamos [problemas con la font](https://www.behova.net/fonts-in-alacritty/)
 
 
