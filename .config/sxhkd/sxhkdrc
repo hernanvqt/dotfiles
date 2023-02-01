@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	alacritty
+	alacritty 
 
 # program launcher
 # super + @space
@@ -20,6 +20,10 @@ super + F1
 # open firefox
 super + q
 	firefox
+
+# open firefox
+super + z
+	google-chrome
 
 super + shift + s 
 	flameshot gui
