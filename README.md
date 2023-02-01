@@ -1,9 +1,6 @@
 # dotfiles
-El directorio dotfiles es subido a github y se usa stow para crear symbolic links de todo lo que haya en este directorio en el directorio padre. Por lo que es necesario añadir un `.stow-local-ignore` para evitar que se creer el sym link de .git y README.md por ejemplo.
-`stow .`
-Hará todos los sys link del directorio en el que se encuentre. Si quisieramos eliminar todos los symbolic links creados, usaremos
-`stow -D .`
-Y se eliminaran los del directorio padre
+El directorio dotfiles es subido a github y se usa stow para crear symbolic links de todo lo que haya en este directorio en el directorio padre. Por lo que es necesario añadir un `.stow-local-ignore` para evitar que se cree el symlink de .git y README.md por ejemplo.
+El comando `stow .` creará los syslink del directorio en el que se encuentre. Si quisieramos eliminar todos los symbolic links creados, usaremos `stow -D .` y se eliminaran los del directorio padre. Se queremos más info iremos al siguiente página: 
 [Give Your Dotfiles a Home with GNU Stow](https://www.youtube.com/watch?v=CxAT1u8G7is)
 
 ---
@@ -20,9 +17,9 @@ $ xinput set-prop device option setting
 Lo copiamos en nuestro config file de bspwmrc
 
 ### Font Iosevka
-1. [Manual Installation](https://github.com/be5invis/Iosevka)
-2. Y lo [instalamos](https://www.internalpointers.com/post/install-new-fonts-linux-command-line) 
-2. En este caso la familia es _Iosevka Term_ 
+1. [Github repository para descargar el font específico](https://github.com/be5invis/Iosevka)
+2. E [instalamos](https://www.internalpointers.com/post/install-new-fonts-linux-command-line) la fuente 
+3. En este caso la familia es _Iosevka Term_ 
 
 ---
 # Lista de programas en el dotfiles
@@ -36,10 +33,10 @@ Lo copiamos en nuestro config file de bspwmrc
 
 
 # Lista de programas
-    1. Git
-    2. Neovim
-    3. Tmux
-    4. ZSH
+1. Git
+2. Neovim
+3. Tmux
+4. ZSH
 ---
 ## Git
 En primer lugar se instala git
@@ -83,9 +80,8 @@ call plug#begin()
 Plug 'junegunn/vim-easy-align'
 call plug#end()
 ```
-Siendo relevante solo los call, y dentro los plugins que se quieran añadir. Y luego los instalaremos con el comando `:PlugInstall` dentro de **nvim**
----
-[vim-plug](https://github.com/junegunn/vim-plug)
+
+Siendo relevante solo los call, y dentro los plugins que se quieran añadir. Y luego los instalaremos con el comando `:PlugInstall` dentro de **nvim**. [vim-plug repository](https://github.com/junegunn/vim-plug)
 ## Tmux
 Se instala con: 
 ```
