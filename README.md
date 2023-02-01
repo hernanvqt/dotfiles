@@ -58,7 +58,7 @@ ssh-add ~/.ssh/id_ed25519
 Es necesario identificar nuestro pc con nombre y email.
 ```
 git config --global user.email "you@example.com"
-git config --global user.name "Your Name"                                                                                                                                                                                                                                 
+git config --global user.name "Your Name"
 ```
 ## Neovim
 La instalación es sencilla
