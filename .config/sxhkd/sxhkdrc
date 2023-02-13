@@ -28,8 +28,8 @@ super + z
 super + shift + s 
 	flameshot gui
 # open emacs
-super + @space
-	emacsclient -c -a 'emacs'
+# super + @space
+# 	emacsclient -c -a 'emacs'
 
 #
 # bspwm hotkeys
