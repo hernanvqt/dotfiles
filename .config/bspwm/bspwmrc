@@ -25,9 +25,11 @@ bspc config automatic_scheme	    spiral
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a firefox desktop='^0'
-bspc rule -a mplayer2 state=floating
+bspc rule -a mpv desktop='^9' follow=on
+bspc rule -a MATLAB state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+bspc rule -a Zathura state=tiled 
 
 $HOME/.config/polybar/launch.sh &
 

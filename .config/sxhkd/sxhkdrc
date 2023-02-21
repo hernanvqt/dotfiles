@@ -18,7 +18,7 @@ super + Escape
 super + F1
 	pavucontrol
 # open firefox
-super + q
+super + e
 	firefox
 
 # open firefox
