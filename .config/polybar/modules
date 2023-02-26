@@ -54,9 +54,9 @@ content-padding = 0
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
 [module/backlight]
-type = internal/xbacklight
+type = internal/backlight
 
-card = intel_backlight
+card = amdgpu_bl1
 
 format = <ramp> <label>
 
