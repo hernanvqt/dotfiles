@@ -2,4 +2,6 @@
 /.git
 README.md
 .gitignore
+*.jpg
+/.doom.d
 

@@ -23,7 +23,7 @@ super + e
 
 # open firefox
 super + z
-	google-chrome
+	google-chrome-stable
 
 super + shift + s 
 	flameshot gui

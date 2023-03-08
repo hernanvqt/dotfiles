@@ -11,7 +11,7 @@ bspc config border_width            	0 #2
 bspc config window_gap        	    	0 #12
 
 # split_ratio determines the ratio between the two leaf nodes when split.
-bspc config split_ratio             	0.52
+bspc config split_ratio             	0.5
 bspc config borderless_monocle      	true
 bspc config gapless_monocle         	true
 
@@ -40,3 +40,7 @@ xinput set-prop "MSFT0002:00 04F3:31AD Touchpad" "libinput Tapping Enabled" 1 # 
 
 xinput set-prop "MSFT0002:00 04F3:31AD Touchpad" "libinput Natural Scrolling Enabled" 1 # Natural scrolling enabled
 
+#  how to set the initial background:
+feh --bg-scale ~/dotfiles/wallpaper.jpg
+setxkbmap es
+xset -b

@@ -44,7 +44,7 @@ font-3 = "Iosevka Nerd Font Mono:size=12;4"
 
 modules-left = mod sep bspwm
 modules-center = date 
-modules-right = volume sep backlight sep network sep battery 
+modules-right = volume sep network sep battery 
 ;modules-right = volume sep brightness sep network sep battery 
 
 separator =
