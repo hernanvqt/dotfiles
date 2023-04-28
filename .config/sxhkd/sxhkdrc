@@ -17,6 +17,10 @@ super + Escape
 # open pavucontrol volumen
 super + F1
 	pavucontrol
+# open pavucontrol volumen
+super + F2
+	blueman-manager
+
 # open firefox
 super + e
 	firefox

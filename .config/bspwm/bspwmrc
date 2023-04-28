@@ -44,3 +44,4 @@ xinput set-prop "MSFT0002:00 04F3:31AD Touchpad" "libinput Natural Scrolling Ena
 feh --bg-scale ~/dotfiles/wallpaper.jpg
 setxkbmap es
 xset -b
+

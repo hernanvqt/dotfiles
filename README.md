@@ -32,19 +32,13 @@ Es necesario eliminar el display manager anterior y sobretodo el servicio activo
 ---
 # Lista de programas en el dotfiles
 1. Git                                                                                                                       
-2. Neovim
+2. Neovim (0.9)
 3. Tmux
 4. ZSH
 5. [alacritty](https://github.com/alacritty/alacritty/blob/master/INSTALL.md#install-the-rust-compiler-with-rustup)
 6. [doom emacs](https://github.com/doomemacs/doomemacs#install)
 7. mpv
 
-
-# Lista de programas
-1. Git
-2. Neovim
-3. Tmux
-4. ZSH
 ---
 ## Git
 En primer lugar se instala git
@@ -68,13 +62,11 @@ Es necesario identificar nuestro pc con nombre y email.
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 ```
-## Neovim
-La instalación es sencilla
-```
-sudo apt install neovim
-```
-pero será la configuración lo relevante, en este caso guardaremos una configuración ya hecha en un repositorio de [dotfiles](https://github.com/hernanvqt/dotfiles), en teoría se debe encontrar en `.config/nvim/init.vim`
 
+## Neovim
+Es una instalación [from source](https://github.com/neovim/neovim/wiki/Building-Neovim)
+
+### vim-plug
 Aquí vendrán guardados unas configuración que podremos modificar o bien buscar en google y copiarlas, en la parte final estarán los plugins.
 Pero para ello es necesario instalar [vim-plug](https://github.com/junegunn/vim-plug)
 ```
