@@ -123,3 +123,8 @@ Y luego se instalará el [ohmyzsh](https://ohmyz.sh/#install)
 Es posible que tengamos [problemas con la font](https://www.behova.net/fonts-in-alacritty/)
 
 
+# Weird problems 
+## Ubuntu's stopped playing music/video files & Youtube in any browser
+[Reset pulseaudio or pipewire](https://www.reddit.com/r/pop_os/comments/v3g2w9/is_there_a_cli_command_to_restart_pipewire/)
+
+[Maybe kill this too](killall pulseaudio; rm -r ~/.config/pulse/*)
