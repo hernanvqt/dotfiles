@@ -21,7 +21,7 @@ Lo copiamos en nuestro config file de bspwmrc
 1. [Github repository para descargar el font específico](https://github.com/ryanoasis/nerd-fonts/releases)
 2. E [instalamos](https://www.internalpointers.com/post/install-new-fonts-linux-command-line) la fuente 
 
-### Ly
+### Ly (display manager)
 [Repositorio](https://github.com/fairyglade/ly)
 - Dependencias
 ``
@@ -31,10 +31,10 @@ Es necesario eliminar el display manager anterior y sobretodo el servicio activo
 
 ---
 # Lista de programas en el dotfiles
-1. Git                                                                                                                       
-2. Neovim (0.9)
-3. Tmux
-4. ZSH
+1. Git
+2. ZSH
+3. Neovim (0.9)
+4. Tmux
 5. [alacritty](https://github.com/alacritty/alacritty/blob/master/INSTALL.md#install-the-rust-compiler-with-rustup)
 6. [doom emacs](https://github.com/doomemacs/doomemacs#install)
 7. mpv
@@ -63,10 +63,18 @@ git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 ```
 
+## ZSH
+```
+sudo apt install zsh
+```
+Y luego se instalará el [ohmyzsh](https://ohmyz.sh/#install)
+
 ## Neovim
 Es una instalación [from source](https://github.com/neovim/neovim/wiki/Building-Neovim)
 
-### vim-plug
+O bien usamos el [NvChad](https://nvchad.com/docs/quickstart/install), en el que será necesario añadir la carpeta `custom` del dotfiles, la dirección es `~/.config/nvim/lua/`.
+
+### vim-plug (plugin manager)
 Aquí vendrán guardados unas configuración que podremos modificar o bien buscar en google y copiarlas, en la parte final estarán los plugins.
 Pero para ello es necesario instalar [vim-plug](https://github.com/junegunn/vim-plug)
 ```
@@ -109,11 +117,6 @@ sudo apt install tmux
 ```
 Y usaremos la conf de los [dotfiles](https://github.com/hernanvqt/dotfiles)
 
-## ZSH
-```
-sudo apt install zsh
-```
-Y luego se instalará el [ohmyzsh](https://ohmyz.sh/#install)
 
 ## Alacritty
 1. Clonar el directorio de alacritty
