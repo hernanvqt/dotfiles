@@ -3,6 +3,3 @@
 README.md
 .gitignore
 wallpaper.jpg
-/.doom.d
-/.config/nvim
-/custom
