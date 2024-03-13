@@ -105,6 +105,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias tmux="tmux new -s \"work\""
+#alias tmux="tmux new -s \"work\""
 alias vi="nvim"
 # bindkey -s '^f' 'ranger^M'
