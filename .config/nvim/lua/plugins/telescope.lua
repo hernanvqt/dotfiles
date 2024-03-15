@@ -74,7 +74,7 @@ return {
     --   desc = "Telescope find lua plugins"
     -- },
     {
-      "<leader>fb",
+      "<leader>bb",
       function()
         require("telescope.builtin").buffers({
           attach_mappings = function(prompt_bufnr, map)
@@ -99,7 +99,7 @@ return {
         require('telescope.builtin').find_files({
           follow = true,
           hidden = true,
-          no_ignore = true,
+          no_ignore = false,
         })
       end,
       desc = "Telescope Find Files",
@@ -112,7 +112,7 @@ return {
       desc = "Telescope Help"
     },
     {
-      "<leader>bb",
+      "<leader>fb",
       function()
         require("telescope").extensions.file_browser.file_browser({ path = "%:h:p", select_buffer = true })
       end,
