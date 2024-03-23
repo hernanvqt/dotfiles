@@ -40,10 +40,11 @@ return {
       vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, { buffer = bufnr, desc = "LSP Renames all references"})
       vim.keymap.set({ 'n', 'v' }, '<space>A', vim.lsp.buf.code_action, { buffer = bufnr, desc = "LSP Code action"})
       vim.keymap.set('n', 'gr', vim.lsp.buf.references, { buffer = bufnr, desc = "LSP Lists all the references to the symbol"})
+
       -- format according to lsp
-      vim.keymap.set('n', '<space>F', function()
-        vim.lsp.buf.format { async = true }
-      end, { buffer = bufnr, desc = "Formats a buffer"})
+      -- vim.keymap.set('n', '<space>F', function()
+      --   vim.lsp.buf.format { async = true }
+      -- end, { buffer = bufnr, desc = "Formats a buffer"})
 
       -- workspace
       vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, { buffer = bufnr, desc = "Add folder at path to the workspace folders"})

@@ -28,7 +28,7 @@ opt.shortmess:append({ W = true, I = true, c = true, C = true })
 opt.showmode = false -- Dont show mode since we have a statusline
 opt.sidescrolloff = 8 -- Columns of context
 opt.smartcase = true -- Don't ignore case with capitals
-opt.smartindent = true -- Insert indents automatically
+opt.smartindent = false -- Insert indents automatically
 opt.spelllang = { "en" }
 opt.splitbelow = true -- Put new windows below current
 opt.splitkeep = "screen"
@@ -51,4 +51,6 @@ opt.fillchars = {
   diff = "╱",
   eob = " ",
 }
+
+
 
