@@ -17,7 +17,7 @@ super + Escape
 # open pavucontrol volumen
 super + F1
 	pavucontrol
-# open pavucontrol volumen
+# open bluetooth manager
 super + F2
 	blueman-manager
 
