@@ -2,15 +2,15 @@ local wk = require("which-key")
 
 wk.add({
   { "<leader>m", group = "Compile"},
-  { "<leader>g", ":CMakeGenerate<CR>", desc = "Generate make system" },
-  { "<leader>m", ":CMakeBuild<CR>"   , desc = "Build targets" },
-  { "<leader>r", ":CMakeRun<CR>"     , desc = "Run targets"},
+  { "<leader>mg", ":CMakeGenerate<CR>", desc = "Generate make system" },
+  { "<leader>mm", ":CMakeBuild<CR>"   , desc = "Build targets" },
+  { "<leader>mr", ":CMakeRun<CR>"     , desc = "Run targets"},
 
   { "<leader>q", group = "Quickfix"},
   { "<leader>qq", ":cclose<CR>", desc = "Close quickfix"},
 
   { "<leader>n", group = "Compile single"},
-  { "<leader>n", ":!g++ -Wall --std=c++20 -o main % && ./main <CR>", desc = "Compile single file"},
+  { "<leader>nn", ":!g++ -Wall --std=c++20 -o main % && ./main <CR>", desc = "Compile single file"},
 })
 
 wk.add({
