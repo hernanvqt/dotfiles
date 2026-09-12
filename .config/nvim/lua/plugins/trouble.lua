@@ -1,39 +1,10 @@
 return
 {
+{
   "folke/trouble.nvim",
   opts = {}, -- for default options, refer to the configuration section for custom setup.
   cmd = "Trouble",
   keys = {
-    {
-      "<leader>dd",
-      "<cmd>Trouble diagnostics toggle<cr>",
-      desc = "Diagnostics (Trouble)",
-    },
-    {
-      "<leader>dD",
-      "<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
-      desc = "Buffer Diagnostics (Trouble)",
-    },
-    {
-      "<leader>ds",
-      "<cmd>Trouble symbols toggle focus=false<cr>",
-      desc = "Symbols (Trouble)",
-    },
-    {
-      "<leader>dl",
-      "<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
-      desc = "LSP Definitions / references / ... (Trouble)",
-    },
-    {
-      "<leader>dL",
-      "<cmd>Trouble loclist toggle<cr>",
-      desc = "Location List (Trouble)",
-    },
-    {
-      "<leader>dQ",
-      "<cmd>Trouble qflist toggle<cr>",
-      desc = "Quickfix List (Trouble)",
-    },
   },
   modes = {
     test = {
@@ -46,4 +17,25 @@ return
       },
     },
   },
+},
+{
+  "sontungexpt/better-diagnostic-virtual-text",
+  event = "LspAttach", -- Carga el plugin cuando el LSP se active
+  config = function()
+    local diagnostic = require("better-diagnostic-virtual-text")
+    diagnostic.setup({
+      ui = {
+        wrap_line_after = 150, -- Envuelve el texto después de esta longitud
+        left_kept_space = 3,   -- Espacio a la izquierda del texto virtual
+        right_kept_space = 3,  -- Espacio a la derecha del texto virtual
+        --arrow = "  ",          -- Icono de flecha para diagnósticos
+        --up_arrow = "  ",
+        --down_arrow = "  ",
+        above = false,         -- Si es `true`, muestra el texto arriba de la línea
+      },
+      priority = 10000,        -- Prioridad de los virtual text
+      inline = true,           -- Muestra los diagnósticos en la misma línea
+    })
+  end,
+}
 }
