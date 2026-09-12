@@ -1,6 +1,7 @@
 local wk = require("which-key")
 
 local v = vim
+local recall = require("recall")
 
 wk.add({
   -- Telescope
@@ -57,8 +58,9 @@ wk.add({
   --{ "<leader>ln", "<cmd>lnext<cr>", desc = "Next item" },
   --{ "<leader>lp", "<cmd>lprevious<cr>", desc = "Previous item" },
 
-  -- Grapple
-  { "<leader>m", group = "Marks" }, -- grupo
+  -- Recall 
+  --{ "<leader>m", group = "Marks" }, -- grupo
+  { "<leader>m", group = "Recall" },
 
 
 })
