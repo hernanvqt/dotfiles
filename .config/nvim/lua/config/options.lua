@@ -1,11 +1,16 @@
 -- lua/config/options.lua
-local opt = vim.opt
+local v = vim
+local opt = v.opt
+
+
+opt.makeprg = 'make' -- Comando a ejecutar
+opt.errorformat = '%f:%l:%c: %m,%f:%l: %m'
 
 -- Recuerda instalar win32yank en windows
 
 -- Establecer el líder ANTES de cargar lazy.nvim
-vim.g.mapleader = " "  -- Barra espaciadora como líder
-vim.g.maplocalleader = ","
+v.g.mapleader = " "  -- Barra espaciadora como líder
+v.g.maplocalleader = ","
 
 -- Apariencia
 opt.number = true
@@ -23,7 +28,7 @@ opt.smartindent = true
 opt.ignorecase = true
 opt.smartcase = true
 
-vim.diagnostic.config({
+v.diagnostic.config({
   -- Muestra el mensaje de error en la misma línea (texto virtual)
   virtual_text = {
     prefix = '■', -- Símbolo al inicio del mensaje

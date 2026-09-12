@@ -3,6 +3,7 @@ local wk = require("which-key")
 local v = vim
 
 wk.add({
+  -- Telescope
   { "<leader>f", group = "Find" }, -- grupo
   { "<leader>bb", "<cmd>Telescope buffers<cr>", desc = "Find buffer" },
   { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find files cwd" },
@@ -14,6 +15,7 @@ wk.add({
   { "<leader>fj", "<cmd>Telescope jumplist<cr>", desc = "Jump list" },
   { "<leader>fq", "<cmd>Telescope quickfix<cr>", desc = "Quickfix list" },
 
+  -- Trouble
   { "<leader>x", group = "Trouble" }, -- grupo
   { "<leader>xx", "<cmd>Trouble diagnostics toggle<cr>", desc = "Diagnostics (Trouble)", },
   { "<leader>xX", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", desc = "Buffer Diagnostics (Trouble)", },
@@ -22,19 +24,41 @@ wk.add({
   { "<leader>xL", "<cmd>Trouble loclist toggle<cr>", desc = "Location List (Trouble)", },
   { "<leader>xQ", "<cmd>Trouble qflist toggle<cr>", desc = "Quickfix List (Trouble)", },
 
+  -- Diagnostics
   { "<leader>d", group = "Diagnostic" }, -- grupo
   { "<leader>df", "<cmd>Telescope diagnostics<cr>", desc = "Find diagnostics" },
-  { "<leader>do", v.diagnostic.open_float, desc = "Mostrar diagnóstico flotante" },
-  { "<leader>dl", v.diagnostic.setloclist, desc = "Enviar a Location List" },
-  { "<leader>dq", v.diagnostic.setqflist, desc = "Enviar a Quickfix" },
+  { "<leader>do", v.diagnostic.open_float, desc = "Show in float window" },
+  { "<leader>dl", v.diagnostic.setloclist, desc = "add to Location List" },
+  { "<leader>dq", v.diagnostic.setqflist, desc = "add to Quickfix" },
   { "<leader>dt", function()
     local current = v.diagnostic.config().virtual_text
     v.diagnostic.config({ virtual_text = not current })
   end, desc = "Toggle virtual text" },
-  { "]d", function() v.diagnostic.jump({ count = 1 }) end, desc = "Siguiente diagnóstico" },
-  { "[d", function() v.diagnostic.jump({ count = -1 }) end, desc = "Diagnóstico anterior" },
+  { "]d", function() v.diagnostic.jump({ count = 1 }) end, desc = "Next diagnostic" },
+  { "[d", function() v.diagnostic.jump({ count = -1 }) end, desc = "Previous diagnostic" },
 
+  -- Buffers
   { "<leader>b", group = "Buffers" }, -- grupo
   { "<leader>bd", "<cmd>bd<cr>", desc = "Close buffer", mode = "n" },
-  { "<leader>ba", "<cmd>%bd|e#<cr>", desc = "Close all buffers except current", mode = "n" },
+  { "<leader>ba", "<cmd>%bd|e#<cr>", desc = "Close all except current", mode = "n" },
+
+  -- Location List
+  { "<leader>l", group = "Location List" },
+  { "<leader>lo", "<cmd>lopen<cr>", desc = "Open Location List" },
+  { "<leader>lc", "<cmd>lclose<cr>", desc = "Close Location List" },
+  --{ "<leader>ln", "<cmd>lnext<cr>", desc = "Next item" },
+  --{ "<leader>lp", "<cmd>lprevious<cr>", desc = "Previous item" },
+  { "<leader>lf", "<cmd>Lfilter ", desc = "Filtrar Location List" },
+
+  -- Quickfix
+  { "<leader>q", group = "Quickfix" },
+  { "<leader>qo", "<cmd>copen<cr>", desc = "Open quickfix List" },
+  { "<leader>qc", "<cmd>cclose<cr>", desc = "Close quickfix List" },
+  --{ "<leader>ln", "<cmd>lnext<cr>", desc = "Next item" },
+  --{ "<leader>lp", "<cmd>lprevious<cr>", desc = "Previous item" },
+
+  -- Grapple
+  { "<leader>m", group = "Marks" }, -- grupo
+
+
 })
