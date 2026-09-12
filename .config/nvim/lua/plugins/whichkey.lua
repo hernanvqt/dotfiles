@@ -12,7 +12,7 @@ return
     },
     keys = {
       {
-        "<leader>?", 
+        "<leader>?",
         function() require("which-key").show({ global = false }) end,
         desc = "Buffer Local Keymaps (which-key)",
       },
@@ -25,7 +25,13 @@ return
 
     wk.add({
       { "<leader>f", group = "Find" }, -- grupo
+
+      { "<leader>d", group = "Diagnostic" }, -- grupo
+      { "<leader>df", "<cmd>Telescope diagnostics<cr>", desc = "Find diagnostics" },
+
       { "<leader>b", group = "Buffers" }, -- grupo
+      { "<leader>bd", "<cmd>bd<cr>", desc = "Close buffer", mode = "n" },
+      { "<leader>ba", "<cmd>%bd|e#<cr>", desc = "Close all buffers except current", mode = "n" },
     })
     end,
 

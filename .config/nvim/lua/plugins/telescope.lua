@@ -39,7 +39,7 @@ return {
       telescope.load_extension("file_browser")
     end,
     keys = {
-      { "<leader>bb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
+      { "<leader>bb", "<cmd>Telescope buffers<cr>", desc = "Find buffer" },
       { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find files cwd" },
       { "<leader>fb", "<cmd>Telescope file_browser<cr>", desc = "File browser" },
       { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Regex in cwd" },
