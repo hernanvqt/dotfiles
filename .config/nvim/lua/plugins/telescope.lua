@@ -39,15 +39,6 @@ return {
       telescope.load_extension("file_browser")
     end,
     keys = {
-      { "<leader>bb", "<cmd>Telescope buffers<cr>", desc = "Find buffer" },
-      { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find files cwd" },
-      { "<leader>fb", "<cmd>Telescope file_browser<cr>", desc = "File browser" },
-      { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Regex in cwd" },
-      { "<leader>ft", "<cmd>Telescope tags<cr>", desc = "List tags in cwd" },
-      { "<leader>fo", "<cmd>Telescope oldfiles<cr>", desc = "Recent files" },
-      { "<leader>fm", "<cmd>Telescope marks<cr>", desc = "Vim marks" },
-      { "<leader>fj", "<cmd>Telescope jumplist<cr>", desc = "Jump list" },
-      { "<leader>fq", "<cmd>Telescope quickfix<cr>", desc = "Quickfix list" },
     },
     opts = {
       defaults = {
