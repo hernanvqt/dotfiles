@@ -76,4 +76,5 @@ wk.add({
   { "<leader>tr", function () require("runner-nvim").runLast() end, desc = "Run last cmd" },
   { "<leader>ty", function () require("runner-nvim").run() end, desc = "Run cmd" },
   { "<leader>tt", function () require("runner-nvim").toggle() end, desc = "Toggle terminal"},
+
 })
