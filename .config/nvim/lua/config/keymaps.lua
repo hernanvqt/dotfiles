@@ -77,4 +77,9 @@ wk.add({
   { "<leader>ty", function () require("runner-nvim").run() end, desc = "Run cmd" },
   { "<leader>tt", function () require("runner-nvim").toggle() end, desc = "Toggle terminal"},
 
+
+  { "<leader>n", group = "Tips" },
+  { "<leader>nto", ":NeovimTips<CR>", desc = "Neovim tips" },
+  { "<leader>ntb", ":NeovimTipsBookmarks<CR>", desc = "Bookmarked tips" },
+  { "<leader>ntr", ":NeovimTipsRandom<CR>", desc = "Show random tip" },
 })
