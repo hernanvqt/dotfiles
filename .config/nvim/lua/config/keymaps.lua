@@ -61,13 +61,19 @@ wk.add({
   -- Proyects 
   --{ "<leader>m", group = "Marks" }, -- grupo
   -- Grupo run
-  { "<leader>r", group = "Run" },
-  { "<leader>rr", ":Switchboard overlay run<CR>",   desc = "Overlay", silent = true },
-  { "<leader>rq", ":Switchboard quickfix build<CR>", desc = "Overlay", silent = true },
+  { "<leader>r", group = "Build, Run" },
+  { "<leader>rr", ":Switchboard overlay run<CR>",   desc = "Run", silent = true },
+  { "<leader>rq", ":Switchboard quickfix build<CR>", desc = "Build", silent = true },
   --{ "<leader>r]", ":Switchboard vsplit run<CR>",    desc = "Vsplit",  silent = true },
   --{ "<leader>r[", ":Switchboard split run<CR>",     desc = "Split",   silent = true },
   -- Grupo debug
   --{ "<leader>d", group = "Debug" },
   --{ "<leader>dd", ":Switchboard overlay debug<CR>",      desc = "Overlay",    silent = true },
   --{ "<leader>db", ":Switchboard background debug<CR>",   desc = "Background", silent = true },
+
+  -- Terminal
+  { "<leader>t", group = "Terminal" },
+  { "<leader>tr", function () require("runner-nvim").runLast() end, desc = "Run last cmd" },
+  { "<leader>ty", function () require("runner-nvim").run() end, desc = "Run cmd" },
+  { "<leader>tt", function () require("runner-nvim").toggle() end, desc = "Toggle terminal"},
 })
