@@ -1,7 +1,6 @@
 local wk = require("which-key")
 
 local v = vim
-local recall = require("recall")
 
 wk.add({
   -- Telescope
