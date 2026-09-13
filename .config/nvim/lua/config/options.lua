@@ -3,8 +3,16 @@ local v = vim
 local opt = v.opt
 
 
-opt.makeprg = 'make' -- Comando a ejecutar
-opt.errorformat = '%f:%l:%c: %m,%f:%l: %m'
+v.api.nvim_create_autocmd("FileType", {
+    pattern = "cpp",
+    callback = function()
+      -- Le dice a :make que compile el archivo actual
+      v.opt_local.makeprg = "g++ % -o %:r -std=c++17 -Wall"
+      opt.errorformat = '%f:%l:%c: %m,%f:%l: %m'
+      --         -- Carga el plugin de compilador de g++ para parsear los errores
+      v.cmd("compiler gcc")
+    end,
+  })
 
 -- Recuerda instalar win32yank en windows
 

@@ -6,7 +6,6 @@ wk.add({
   { "<leader>?", "<cmd>Cheatsheet<cr>", desc = "Cheatsheet" },
   -- Telescope
   { "<leader>f", group = "Find" }, -- grupo
-  { "<leader>bb", "<cmd>Telescope buffers<cr>", desc = "Find buffer" },
   { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find files cwd" },
   { "<leader>fb", "<cmd>Telescope file_browser<cr>", desc = "File browser" },
   { "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Regex in cwd" },
@@ -40,8 +39,12 @@ wk.add({
 
   -- Buffers
   { "<leader>b", group = "Buffers" }, -- grupo
+  { "<leader>bb", "<C-^>", desc = "Last buffer (alternate)" },
+  { "<leader>bf", "<cmd>Telescope buffers<cr>", desc = "Find buffer" },
   { "<leader>bd", "<cmd>bd<cr>", desc = "Close buffer", mode = "n" },
   { "<leader>ba", "<cmd>%bd|e#<cr>", desc = "Close all except current", mode = "n" },
+  { "<leader>bn", ":bnext<CR>", desc = "Next buffer" },
+  { "<leader>bp", ":bprevious<CR>", desc = "Previous buffer" },
 
   -- Location List
   { "<leader>l", group = "Location List" },
@@ -77,9 +80,4 @@ wk.add({
   { "<leader>ty", function () require("runner-nvim").run() end, desc = "Run cmd" },
   { "<leader>tt", function () require("runner-nvim").toggle() end, desc = "Toggle terminal"},
 
-
-  { "<leader>n", group = "Tips" },
-  { "<leader>nto", ":NeovimTips<CR>", desc = "Neovim tips" },
-  { "<leader>ntb", ":NeovimTipsBookmarks<CR>", desc = "Bookmarked tips" },
-  { "<leader>ntr", ":NeovimTipsRandom<CR>", desc = "Show random tip" },
 })

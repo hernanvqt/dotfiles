@@ -1,12 +1,6 @@
 return
 {
   {
-    "m4xshen/hardtime.nvim",
-    lazy = false,
-    dependencies = { "MunifTanjim/nui.nvim" },
-    opts = {},
-  },
-  {
     "saxon1964/neovim-tips",
     version = "*", -- Only update on tagged releases
     lazy = false,  -- Load on startup for daily tip
@@ -18,7 +12,7 @@ return
     },
     opts = {
       -- OPTIONAL: Daily tip mode (default: 1)
-      daily_tip = 2,  -- 0 = off, 1 = once per day, 2 = every startup
+      daily_tip = 1,  -- 0 = off, 1 = once per day, 2 = every startup
       -- OPTIONAL: Bookmark symbol (default: "🌟 ")
       bookmark_symbol = "🌟 ",
     },
