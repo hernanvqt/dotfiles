@@ -3,6 +3,7 @@ local wk = require("which-key")
 local v = vim
 
 wk.add({
+  { "<leader>?", "<cmd>Cheatsheet<cr>", desc = "Cheatsheet" },
   -- Telescope
   { "<leader>f", group = "Find" }, -- grupo
   { "<leader>bb", "<cmd>Telescope buffers<cr>", desc = "Find buffer" },
@@ -57,9 +58,16 @@ wk.add({
   --{ "<leader>ln", "<cmd>lnext<cr>", desc = "Next item" },
   --{ "<leader>lp", "<cmd>lprevious<cr>", desc = "Previous item" },
 
-  -- Recall 
+  -- Proyects 
   --{ "<leader>m", group = "Marks" }, -- grupo
-  { "<leader>m", group = "Recall" },
-
-
+  -- Grupo run
+  { "<leader>r", group = "Run" },
+  { "<leader>rr", ":Switchboard overlay run<CR>",   desc = "Overlay", silent = true },
+  { "<leader>rq", ":Switchboard quickfix build<CR>", desc = "Overlay", silent = true },
+  --{ "<leader>r]", ":Switchboard vsplit run<CR>",    desc = "Vsplit",  silent = true },
+  --{ "<leader>r[", ":Switchboard split run<CR>",     desc = "Split",   silent = true },
+  -- Grupo debug
+  --{ "<leader>d", group = "Debug" },
+  --{ "<leader>dd", ":Switchboard overlay debug<CR>",      desc = "Overlay",    silent = true },
+  --{ "<leader>db", ":Switchboard background debug<CR>",   desc = "Background", silent = true },
 })
