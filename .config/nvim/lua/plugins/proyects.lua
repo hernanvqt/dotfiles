@@ -4,35 +4,37 @@ return
     "karnull/switchboard.nvim",
     config = function()
       require('switchboard').setup({
-        commands = {
-          lazygit = "lazygit",
-        },
-        build_run_config = {
-          --{
-            --extension = {'py'},
-            --commands  = {
-              --run   = 'uv run main',
-              --build = 'uv run pyinstaller bin ./*/__main__.py',
-              --},
-              --binds = {
-                --divide = 'I#<Esc>79A=<Esc>o',
-                --import = 'Iimport ',
-                --}
-                --},
-                {
-                  extension = {'c', 'cpp', 'h'},
-                  cd_root   =  true,
-                  commands  = {
-                    run   = 'make run',
-                    build = 'make',
-                    debug = 'gdb ./bin',
-                  },
-                  binds = {
-                    divide = 'I//<Esc>78A=<Esc>o',
-                    import = 'I#include ',
-                  }
-                }
+          commands = {
+            lazygit = "lazygit",
+          },
+          build_run_config = {
+            {
+              extension = {'py'},
+              cd_root = true,
+              commands  = {
+                run   = 'make run',
+                whereami   = 'pwd',
+                -- build = 'uv run pyinstaller bin ./*/__main__.py',
+              },
+              binds = {
+                divide = 'I#<Esc>79A=<Esc>o',
+                import = 'Iimport ',
               }
+            },
+            {
+              extension = {'c', 'cpp', 'h'},
+              cd_root   =  true,
+              commands  = {
+                run   = 'make run',
+                build = 'make',
+                debug = 'make debug',
+              },
+              binds = {
+                divide = 'I//<Esc>78A=<Esc>o',
+                import = 'I#include ',
+              }
+            }
+          }
             })
           end,
         },

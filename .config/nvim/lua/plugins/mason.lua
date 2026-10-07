@@ -9,8 +9,8 @@ return
     require("mason").setup()
     require("mason-lspconfig").setup({
       ensure_installed = {
-        "lua_ls",       -- Lua
-        "clangd",       -- C/C++
+        "lua_ls", -- Lua
+        "clangd", -- C/C++
         -- Añade aquí otros servidores que necesites
       },
     })
