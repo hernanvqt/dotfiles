@@ -3,3 +3,5 @@
 	name = Hernan VQ
 [core]
 	editor = vim
+[init]
+	defaultBranch = main

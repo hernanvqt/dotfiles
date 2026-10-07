@@ -105,3 +105,5 @@ export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vi="nvim"
+
+. "$HOME/.local/bin/env"
