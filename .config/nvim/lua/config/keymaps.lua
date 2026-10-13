@@ -4,8 +4,6 @@ local v = vim
 
 wk.add({
   { "<leader>?",  "<cmd>Cheatsheet<cr>",                                        desc = "Cheatsheet" },
-  -- Format
-  { "<leader>ss", "<cmd>lua vim.lsp.buf.format()<cr>",                          desc = "Format" },
   -- Telescope
   { "<leader>f",  group = "Find" }, -- grupo
   { "<leader>ff", "<cmd>Telescope find_files<cr>",                              desc = "Find files cwd" },
@@ -51,6 +49,7 @@ wk.add({
   { "<leader>ba", "<cmd>%bd|e#<cr>",                                desc = "Close all except current", mode = "n" },
   { "<leader>bn", ":bnext<CR>",                                     desc = "Next buffer" },
   { "<leader>bp", ":bprevious<CR>",                                 desc = "Previous buffer" },
+  { "<leader>bs", "<cmd>lua vim.lsp.buf.format()<cr>",                          desc = "Format" },
 
   -- Location List
   { "<leader>l",  group = "Location List" },
