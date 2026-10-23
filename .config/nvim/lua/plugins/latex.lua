@@ -1,0 +1,28 @@
+-- ~/.config/nvim/lua/plugins/latex.lua
+
+return{}
+-- return {
+--   {
+--     "lervag/vimtex",
+--     lazy = false, -- Load immediately for .tex files
+--     init = function()
+--       -- Use Zathura as the PDF viewer
+--       vim.g.vimtex_view_method = "zathura"
+--       -- Enable forward search on start
+--       vim.g.vimtex_view_forward_search_on_start = 1
+--       -- Use latexmk and output to a build directory
+--       vim.g.vimtex_compiler_method = "latexmk"
+--       vim.g.vimtex_compiler_latexmk = {
+--         build_dir = "build",
+--         options = {
+--           "-interaction=nonstopmode",
+--           "-file-line-error",
+--         },
+--       }
+--       -- Set flavor to latex (or lualatex for Japanese support)
+--       vim.g.tex_flavor = "latex"
+--     end,
+--     keys = {
+--     },
+--   },
+-- }

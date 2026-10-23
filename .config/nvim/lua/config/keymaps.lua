@@ -45,19 +45,25 @@ wk.add({
   { "<leader>b",  group = "Buffers" }, -- grupo
   { "<leader>bb", "<C-^>",                                          desc = "Last buffer (alternate)" },
   { "<leader>bf", "<cmd>Telescope buffers<cr>",                     desc = "Find buffer" },
-  { "<leader>bd", "<cmd>bd<cr>",                                    desc = "Close buffer",             mode = "n" },
-  { "<leader>ba", "<cmd>%bd|e#<cr>",                                desc = "Close all except current", mode = "n" },
+  { "<leader>bd", "<cmd>bd<cr>",                                    desc = "Close buffer",                mode = "n" },
+  { "<leader>ba", "<cmd>%bd|e#<cr>",                                desc = "Close all except current",    mode = "n" },
   { "<leader>bn", ":bnext<CR>",                                     desc = "Next buffer" },
   { "<leader>bp", ":bprevious<CR>",                                 desc = "Previous buffer" },
-  { "<leader>bs", "<cmd>lua vim.lsp.buf.format()<cr>",                          desc = "Format" },
+  { "<leader>bs", "<cmd>lua vim.lsp.buf.format()<cr>",              desc = "Format" },
 
   -- Location List
-  { "<leader>l",  group = "Location List" },
-  { "<leader>lo", "<cmd>lopen<cr>",                                 desc = "Open Location List" },
-  { "<leader>lc", "<cmd>lclose<cr>",                                desc = "Close Location List" },
-  --{ "<leader>ln", "<cmd>lnext<cr>", desc = "Next item" },
-  --{ "<leader>lp", "<cmd>lprevious<cr>", desc = "Previous item" },
-  { "<leader>lf", "<cmd>Lfilter ",                                  desc = "Filtrar Location List" },
+  -- { "<leader>l",  group = "Location List" },
+  -- { "<leader>lo", "<cmd>lopen<cr>",                                 desc = "Open Location List" },
+  -- { "<leader>lc", "<cmd>lclose<cr>",                                desc = "Close Location List" },
+  -- --{ "<leader>ln", "<cmd>lnext<cr>", desc = "Next item" },
+  -- --{ "<leader>lp", "<cmd>lprevious<cr>", desc = "Previous item" },
+  -- { "<leader>lf", "<cmd>Lfilter ",                                  desc = "Filtrar Location List" },
+
+  -- -- LaTeX
+  -- { "<leader>l",  group = "LaTeX" },
+  -- { "<leader>ll", "<cmd>VimtexCompileToggle<cr>",                   desc = "LaTeX: Auto Compile (toggle)" },
+  -- { "<leader>lp", "<cmd>VimtexView<cr>",                            desc = "LaTeX: View PDF" },
+  -- { "<leader>lc", "<cmd>VimtexClean<cr>",                           desc = "LaTeX: Clean build" },
 
   -- Quickfix
   { "<leader>q",  group = "Quickfix" },
@@ -70,11 +76,11 @@ wk.add({
   --{ "<leader>m", group = "Marks" }, -- grupo
   -- Grupo run
   { "<leader>r",  group = "Build, Run" },
-  { "<leader>rr", ":Switchboard overlay run<CR>",                   desc = "Run",                      silent = true },
-  { "<leader>rq", ":Switchboard quickfix build<CR>",                desc = "Build",                    silent = true },
-  { "<leader>r]", ":Switchboard vsplit run<CR>",                    desc = "Run vertical",             silent = true },
-  { "<leader>rd", ":Switchboard vsplit debug<CR>",                  desc = "Debug",                    silent = true },
-  { "<leader>rw", ":Switchboard overlay whereami<CR>",              desc = "whereami",                 silent = true },
+  { "<leader>rr", ":Switchboard overlay run<CR>",                   desc = "Run",                         silent = true },
+  { "<leader>rq", ":Switchboard quickfix build<CR>",                desc = "Build",                       silent = true },
+  { "<leader>r]", ":Switchboard vsplit run<CR>",                    desc = "Run vertical",                silent = true },
+  { "<leader>rd", ":Switchboard vsplit debug<CR>",                  desc = "Debug",                       silent = true },
+  { "<leader>rw", ":Switchboard overlay whereami<CR>",              desc = "whereami",                    silent = true },
   -- Grupo debug
   --{ "<leader>d", group = "Debug" },
   --{ "<leader>db", ":Switchboard background debug<CR>",   desc = "Background", silent = true },
