@@ -4,20 +4,19 @@ local opt = v.opt
 
 
 v.api.nvim_create_autocmd("FileType", {
-    pattern = "cpp",
-    callback = function()
-      -- Le dice a :make que compile el archivo actual
-      v.opt_local.makeprg = "g++ % -o %:r -std=c++17 -Wall"
-      opt.errorformat = '%f:%l:%c: %m,%f:%l: %m'
-      --         -- Carga el plugin de compilador de g++ para parsear los errores
-      v.cmd("compiler gcc")
-    end,
-  })
-
+  pattern = "cpp",
+  callback = function()
+    -- Le dice a :make que compile el archivo actual
+    v.opt_local.makeprg = "g++ % -o %:r -std=c++17 -Wall"
+    opt.errorformat = '%f:%l:%c: %m,%f:%l: %m'
+    --         -- Carga el plugin de compilador de g++ para parsear los errores
+    v.cmd("compiler gcc")
+  end,
+})
 -- Recuerda instalar win32yank en windows
 
 -- Establecer el líder ANTES de cargar lazy.nvim
-v.g.mapleader = " "  -- Barra espaciadora como líder
+v.g.mapleader = " " -- Barra espaciadora como líder
 v.g.maplocalleader = ","
 
 -- Apariencia
